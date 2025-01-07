@@ -1,0 +1,794 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Alegreya;
+}
+
+/* making the animation of scrolling smooth */
+html{
+  scroll-behavior: smooth;
+}
+
+/* fonts */
+body {
+    font-family: 'Alegreya', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Alegreya', sans-serif;
+}
+
+p {
+    font-family: 'Alegreya', serif;
+}
+
+.mid p, .creator .about p {
+    font-family: 'Alegreya', serif;
+}
+
+#item li a {
+    font-family: 'Alegreya', sans-serif;
+}
+/* fonts */
+
+/* styling of navigation bar starts here*/
+
+/* styling the "nav" div */
+.nav{
+	position: fixed;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 0.6rem 4.5rem;
+	background: #303130;
+	z-index: 100000; /* to keep the nav bar always on the top */
+}
+
+/* changing the color and size of the title "Drexel Map" */
+.nav h2{
+	color: #fff;
+	font-size: 1.7rem;
+}
+
+/* targeting the item id to align them */
+#item{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+/* targeting the list tag to change the padding of the list */
+#item li{
+	list-style: none;
+	padding-right: 50px;
+}
+
+/* targeting the anchor tag to change the text of navigation bar elements */
+#item li a{
+	text-decoration: none;
+	font-size: 1rem;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+#item li a:hover, #item .icon i:hover{
+	color: #ff5733;
+	cursor: pointer;
+}
+
+#item .icon i{
+	color:  #fff;
+	padding-right:  30px;
+	font-weight: : bolder;
+}
+
+#bar{
+	color:  #ff5733;
+	font-weight: lighter;
+	font-size: 1.5rem;
+	display: none;
+}
+/* styling of navigation bar ends here*/
+
+
+
+
+/* styling of the body starts here */
+
+/* styling the "back" class starts here*/
+.back{
+	background-image: url(background_image.jpg);
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	z-index: -1;
+}
+
+/* making an overlay over the background image */
+.back .overlay{
+	background: #171819;
+	width: 100%;
+	height: 100%;
+	opacity: 0.75; /* opacity of the overlay */
+}
+/* styling of the "back" class ends here*/
+
+
+
+/* designing "mid" class starts here */
+.mid{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+
+/* designing the paragraph "A new way to navigate . . ." */
+.mid p{
+	color: #7f8c8d;
+	font-size: 1.3rem;
+	margin-bottom: 1.4rem;
+}
+
+/* deisigning the heading "Never get lost. . ." */
+.mid h2{
+	color: #7f8c8d;
+	font-size: 3rem;
+}
+
+/* deisgning the button */
+.mid .btn{
+	margin-top: 2rem;
+}
+
+/* designing the text inside button */
+.mid .btn a{
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+/* designing the buttob border */
+.mid .btn a.border{
+	color: #7f8c8d;
+	border: 1px solid #7f8c8d;
+	font-weight: 500;
+	padding: 0.9rem 1.6rem;
+	border-radius: 3px;
+}
+
+/* changing the color of the button when mouse hovers over it */
+.mid .btn a.border:hover{
+	background: #fff;
+	border: 1px solid #fff;
+}
+/* styling of the "mid" class ends here */
+
+
+
+/* styling of the "creator" class starts here */
+.creator{
+	background: #f9f9f9;
+	padding: 8rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+/* styling of the "about" class starts here */
+.creator .about{
+	width: 30%;
+	padding-right: 20px;
+}
+
+.creator .about h2{
+	color: #212529;
+	font-size: 2.1rem;
+	padding-bottom: 1.8rem;
+}
+
+.creator .about p{
+	color: #7f8c8d;
+	font-size: 1.1rem;
+	text-align: justify;
+}
+/* styling of the "about" class ends here */
+
+/* styling of the "people" class starts here */
+.creator .people{
+	width: 75%;
+  	display: flex;
+  	flex-direction: row;
+  	justify-content: flex-end;
+  	align-items: center;
+  	gap: 20px;
+}
+
+/* styling of the "team1" class starts here */
+.creator .people .team1{
+	width: 35%;
+	height: auto;
+	box-sizing: border-box;
+	background: #fff;
+	box-shadow:4.5px 4.5px 3.6px rgba(0, 0, 0, 0.031),
+	12.5px 12.5px 10px rgba(0, 0, 0, 0.045),
+	30.1px 30.1px 24.1px rgba(0, 0, 0, 0.059),
+	100px 100px 80px rgba(0, 0, 0, 0.09)
+}
+
+/* styling of the image inside "img" class */
+.creator .people .team1 .img img{
+	width: 100%;
+	object-fit: cover;
+}
+
+/* styling of the "name" and "job" classes starts here */
+.creator .people .team1 .name, .creator .people .team1 .job{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.creator .people .team1 .name{
+	padding: 5px 20px 0 20px;
+}
+
+/* styling of the "teamDetails" class */
+.creator .people .team1 .teamDetails{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-bottom: 10px;
+}
+
+/* styling of the h4 tag inside "name" class */
+.creator .people .team1 .name h4{
+	color: #212529;
+	font-size: 1.5rem;
+}
+
+/* styling of the "job" class */
+.creator .people .team1 .job{
+	padding: 0 20px 5px 20px;
+}
+
+/* styling of the "team1", "people", and "creator" classes ends here */
+
+
+
+/*Styling of "teamcharter" class begins here*/
+.teamcharter{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 7rem 8rem;
+}
+
+/* styling h2 tag inside "teamcharter" class */
+.teamcharter .h2{
+	font-size: 2.2rem;
+	color: #222;
+	font-weight: 700;
+	padding-bottom: 50px;
+	text-align: center;
+}
+
+/* styling of "chartermenu" class */
+.teamcharter .charterMenu{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* styling of the "team1" class */
+.teamcharter .charterMenu .team1{
+	width: 32%;
+	height: auto;
+	box-sizing: border-box;
+	background: #fff;
+	box-shadow:4.5px 4.5px 3.6px rgba(0, 0, 0, 0.031),
+	12.5px 12.5px 10px rgba(0, 0, 0, 0.045),
+	30.1px 30.1px 24.1px rgba(0, 0, 0, 0.059),
+	100px 100px 80px rgba(0, 0, 0, 0.09)
+}
+
+
+/* styling of the img inside "img" class */
+.teamcharter .charterMenu .team1 .img img{
+	width: 100%;
+	object-fit: cover;
+}
+
+/* styling of the "job" and "name" classes */
+.teamcharter .charterMenu .team1 .name, .creator .people .team1 .job{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+/* styling of the "name" class */
+.teamcharter .charterMenu .team1 .name{
+	padding: 5px 20px 0 20px;
+}
+
+/* styling of the "teamDetails" class */
+.teamcharter .charterMenu .team1 .teamDetails{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-bottom: 10px;
+}
+
+/* styling of the h4 tag inside "name" class */
+.teamcharter .charterMenu .team1 .name h4{
+	color: #212529;
+	font-size: 1.5rem;
+}
+
+/* styling of the "job" class */
+.teamcharter .charterMenu .team1 .job{
+	padding: 0 20px 5px 20px;
+}
+
+/*Styling of Team Charter ends here*/
+
+
+/*  styling for when the screen size changes | making the wesbite responsive according to the screen size it is being viewed in */
+/* for 1042 resoultion */
+@media screen and (max-width:  1042px){
+	.nav{
+		padding: 0.6rem 2.5rem;
+	}
+
+	.nav h2{
+		font-size: 1.4rem;
+	}
+
+	#item li{
+		padding-right: 30px;
+	}
+
+	#item li a{
+		font-size: 0.9rem;
+	}
+
+	#item .icon i{
+		padding-right:  20px;
+	}
+}
+
+
+
+/*  styling for when the screen size changes | making the wesbite responsive according to the screen size it is being viewed in */
+/* for 991 resoultion */
+@media screen and (max_width: 991px){
+	.nav{
+		padding: 0.6rem 2rem;
+	}
+
+	.nav h2{
+		font-size: 1.6rem;
+	}
+
+	#item{
+		flex-direction: column;
+		text-align:  center;
+		width:  300px;
+		height:  80vh;
+		position:  fixed;
+		top:  0;
+		right:  -300px;
+		background: rgba(0,0,0,0.8);
+		z-index:  100000;
+		margin-top:  4.2rem;
+		transition: 0.5s;
+	}
+
+	#item li{
+		padding-right: 0;
+		padding:  4px 0;
+	}
+
+	#item li a{
+		font-size: 1.2rem;
+	}
+
+	#item .icon{
+		padding-top:  20px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#item .icon i{
+		padding:  0 15px 0 15px;
+	}
+
+	#bar{
+		display:  initial;
+		cursor:  pointer;
+	}	
+
+	.mid p{
+	font-size: 1.1rem;
+	margin-bottom: 1.2rem;
+	}
+
+	.mid h2{
+		font-size: 2.5rem;
+	}
+
+	.mid .btn{
+		margin-top: 1.5rem;
+	}
+
+	.mid .btn a{
+		font-size:  0.9rem;
+	}
+
+	.mid .btn a.border{
+		padding: 0.7rem 1.4rem;
+	}
+
+	.creator{
+	padding: 6rem 7rem;
+	}
+
+	.creator .about{
+		width: 20%;
+	}
+
+	.creator .about h2{
+		font-size: 2rem;
+		padding-bottom: 1.4rem;
+	}
+
+	.creator .about p{
+		font-size: 1rem;
+	}
+
+
+	.creator .people{
+		width: 48%;
+	}
+
+	.creator .people .team1{
+		width: 48%;
+	}
+
+	.creator .people .team1 .name{
+		padding: 5px 15px 0 15px;
+	}
+
+	.creator .people .team1 .name h4{
+		font-size: 1.1rem;
+	}
+
+	.creator .people .team1 .job{
+		padding: 0 15px 5px 15px;
+	}
+
+	.teamcharter{
+		padding: 6rem;
+	}
+
+	.teamcharter .h2{
+		font-size: 2rem;
+		padding-bottom: 30px;
+	}
+
+
+	.teamcharter .charterMenu .team1 .teamDetails{
+		padding-bottom: 7px;
+	}
+
+
+	.teamcharter .charterMenu .team1 .job{
+		padding: 0 15px 5px 15px;
+	}
+
+}
+
+
+
+/*  styling for when the screen size changes | making the wesbite responsive according to the screen size it is being viewed in */
+/* for 768 resoultion */
+ @media screen and (max-width:  768px){
+
+	.nav h2{
+		font-size: 1.5rem;
+	}
+
+	.back{
+		background-position: center;
+	}
+
+
+	.mid p{
+	font-size: 1rem;
+	margin-bottom: 1rem;
+	}
+
+	.mid h2{
+		font-size: 2.1rem;
+	}
+
+	.mid .btn{
+		margin-top: 1rem;
+		display:  flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.mid .btn a.border{
+		padding: 0.7rem 1.4rem;
+	}
+
+	.creator{
+	padding: 5rem 2rem;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	}
+
+	.creator .about{
+		width: 70%;
+		margin-bottom: 1.7rem;
+	}
+
+	.creator .people{
+		width: 70%;
+	}
+
+	.teamcharter{
+		padding: 6rem;
+	}
+
+	.teamcharter .charterMenu{
+		flex-direction: column;
+		justify-content: center;
+	}
+
+  .teamcharter .charterMenu .team1{
+		width: 65%;
+		margin-bottom: 20px ;
+	}
+
+ }
+
+
+
+/*  styling for when the screen size changes | making the wesbite responsive according to the screen size it is being viewed in */
+/* for 496 resoultion */
+ @media screen and (max-width: 496px){
+
+	.mid p{
+	margin-bottom: 0.8rem;
+	}
+
+	.mid h2{
+		font-size: 1.8rem;
+	}
+
+	.mid .btn{
+		margin-top: 0.7rem;
+	}
+
+	.creator{
+	padding: 4rem 1rem;
+	}
+
+	.creator .about{
+		width: 100%;
+	}
+
+	.creator .people{
+		width: 80%;
+		flex-direction: column;
+		justify-content: center;
+	}
+  .creator .people .team1{
+		width: 100%;
+    margin-bottom: 20px;
+	}
+
+
+	.teamcharter{
+		padding: 6rem;
+	}
+
+	.teamcharter .charterMenu{
+		flex-direction: column;
+		justify-content: center;
+	}
+
+ }
+
+
+
+
+
+
+/*This is where the styling of the documentation table starts */
+
+.table_body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: #adacac;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.header_fixed {
+    max-height: 100vh;
+    width: 100%;
+    overflow: auto;
+    border: 1px solid #dddddd;
+}
+
+.header_fixed thead th {
+    position: sticky;
+    top: 0;
+    background-color: #303130;
+    color: #e6e7e8;
+    font-size: 15px;
+}
+
+th,
+td {
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+td img {
+    height: 200px;
+    width: 200px;
+    border: 5px solid #e6e7e8;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+tr:nth-child(odd) {
+    background-color: #edeef1;
+}
+
+tr:hover td {
+    color: #ff5733;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+td button {
+    border: none;
+    padding: 7px 20px;
+    border-radius: 20px;
+    background-color: black;
+    color: #e6e7e8;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+/* color codes for the buildings*/
+.box {
+  float: left;
+  height: 20px;
+  width: 20px;
+  margin-bottom: -10px;
+  clear: both;
+}
+
+.health {
+  background-color: #1E6C33;
+}
+
+.academic {
+  background-color: #B4A003;
+}
+
+.food {
+  background-color: #FF7900;
+}
+
+.residential {
+	background-color: #2F91D6;
+}
+
+.social {
+	background-color: #279054;
+}
+
+.sports {
+	background-color: #6E306F;
+}
+
+
+.creator .people .team1 .img img,
+.teamcharter .charterMenu .team1 .img img {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+
+/* Add rounded corners to buttons and containers */
+.btn a.border,
+.creator .people .team1,
+.teamcharter .charterMenu .team1,
+input[type="text"],
+select {
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.btn a.border:hover,
+input[type="text"]:focus,
+select:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+}
+
+
+/* Improve spacing between team member photos */
+.creator .people {
+    justify-content: space-evenly;
+}
+
+/* Enhance responsiveness */
+@media screen and (max-width: 768px) {
+    .creator .people {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .creator .people .team1 {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Add hover effects */
+.btn a.border:hover,
+#item li a:hover {
+    transition: all 0.3s ease;
+    transform: scale(1.05);
+}
+
+/* Implement smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+
+
